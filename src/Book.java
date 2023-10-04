@@ -21,7 +21,7 @@ public class Book {
     public void setTitle(String title) {this.title = title;}
 
 //    toString Method that will return a string with pages and title
-    public String toSting(){
+    public String toString(){
         String BookValues = Integer.toString(pages);
         BookValues = BookValues.concat(", ").concat(title);
         return BookValues;
