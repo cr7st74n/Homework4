@@ -17,6 +17,7 @@ public class TestBooks {
         for(int i = 0;i < numberOfBooks; i ++){
             System.out.println("Enter the title of the book Number: " +(i+1));
             String titleUser = scanner.next();
+            titleUser+= scanner.nextLine();
             System.out.println("Enter the number of pages for your book Number: " +(i+1));
             int pagesUser = scanner.nextInt();
             Book booksForUser = new Book();
@@ -44,8 +45,8 @@ public class TestBooks {
 
         for(int i = 0; i<lastBook; i++){
             int compare = SmallPages.CompareTo(BooksReadSummer.get(i),BooksReadSummer.get(i+1));
-            if (compare == -1){
-                BooksReadSummer.set(i+1,BooksReadSummer.get(i));
+            if (compare == -1) {
+                BooksReadSummer.set(i + 1, BooksReadSummer.get(i));
             }
         }
         System.out.println("the Smallest number of pages in a Book is: " +BooksReadSummer.get(lastBook));
